@@ -1,0 +1,30 @@
+{{#if books}}
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Categoría</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each books}}
+        <tr>
+          <td>{{title}}</td>
+          <td>{{author}}</td>
+          <td>{{categories}}</td>
+          <td>
+            <a href="/books/{{_id}}/edit" class="btn btn-info">Editar</a>
+            <a href="/books/{{_id}}/delete" class="btn btn-danger">Eliminar</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="text-center">
+    <img src="/icon/book.svg" alt="" class="w-25" />
+  </div>
+{{/if}}

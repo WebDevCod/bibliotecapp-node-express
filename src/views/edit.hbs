@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body p-4">
+        <h1>Actualizar datos</h1>
+        <form action="/books/{{book._id}}/edit" method="POST">
+          <div class="mb-3">
+            <label for="title">Título:</label>
+            <input
+              type="text"
+              name="title"
+              value="{{book.title}}"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="author">Autor:</label>
+            <input
+              type="text"
+              name="author"
+              value="{{book.author}}"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="categories">Categoría:</label>
+            <input
+              type="text"
+              name="categories"
+              value="{{book.categories}}"
+              class="form-control"
+            />
+          </div>
+          <button class="btn btn-primary">Actualizar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
